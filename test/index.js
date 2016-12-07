@@ -9,7 +9,7 @@ function about(req, res) {
 	return 'about';
 }
 
-mod.routes([{'/': home}]);
+mod.routes({'/': home});
 mod.add('/about', about);
 
 test('routing', function(t) {
