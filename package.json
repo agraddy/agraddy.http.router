@@ -17,6 +17,11 @@
     "url": "https://github.com/agraddy/agraddy.http.router/issues"
   },
   "devDependencies": {
+    "agraddy.test.res": "^0.2.0",
     "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "async": "^2.1.4",
+    "safe-regex": "^1.1.0"
   }
 }
