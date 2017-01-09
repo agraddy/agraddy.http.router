@@ -20,6 +20,9 @@ router.get.add('/about', about);
 
 router.on('loaded', function(err) {
 	test('basic routing', function(t) {
+		// Set router.loaded to true once loaded has been emitted
+		t.equal(router.loaded, true);
+
 		// Test a request
 		t.equal(router.handler({url: '/about', method: 'GET'}, null), 'about');
 
