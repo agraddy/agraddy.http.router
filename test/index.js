@@ -99,6 +99,14 @@ router.on('loaded', function(err) {
 		}
 	});
 
+	test('ignore query variables', function(t) {
+		// Test a request
+		t.equal(router.handler({url: '/about?query', method: 'GET'}, null), 'about');
+
+		t.end();
+	});
+
+
 	// TODO: Add a test for _overwrite.js (or maybe call it _post.js)
 
 	// TODO: Have an option to set the timeout for auto route parsing
